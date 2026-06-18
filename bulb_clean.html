@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Bulb Toggle</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+
+    #bulb {
+      max-width: 80%;
+      height: auto;
+      background-color: black;
+      padding: 10px;
+      border-radius: 10px;
+      transition: background-color 0.5s ease;
+    }
+
+    button {
+      width: 120px;
+      margin: 10px;
+      padding: 8px;
+      cursor: pointer;  
+    }
+  </style>
+</head>
+<body>
+  <h2>Light Bulb Toggle</h2>
+
+  <!-- Light bulb image -->
+  <img id="bulb" src="bulb_off.png" alt="Light bulb">
+
+  <br>
+
+  <!-- Buttons -->
+  <button onclick="toggleBulb(true)">Turn ON</button>
+  <button onclick="toggleBulb(false)">Turn OFF</button>
+
+  <script>
+    function toggleBulb(isOn) {
+      const bulb = document.getElementById('bulb');
+      bulb.src = isOn ? 'bulb_on.png' : 'bulb_off.png';
+      bulb.style.backgroundColor = isOn ? 'yellow' : 'black';
+    }
+  </script>
+</body>
+</html>
