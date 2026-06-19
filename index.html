@@ -36,7 +36,7 @@
   <h2>Light Bulb Toggle</h2>
 
   <!-- Light bulb image -->
-  <img id="bulb" src="bulb_off.png" alt="Light bulb">
+  <img id="bulb" src="image/bulb_off.png" alt="Light bulb">
 
   <br>
 
@@ -47,7 +47,7 @@
   <script>
     function toggleBulb(isOn) {
       const bulb = document.getElementById('bulb');
-      bulb.src = isOn ? 'bulb_on.png' : 'bulb_off.png';
+      bulb.src = isOn ? 'image/bulb_on.png' : 'image/bulb_off.png';
       bulb.style.backgroundColor = isOn ? 'yellow' : 'black';
     }
   </script>
